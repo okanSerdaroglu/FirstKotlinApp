@@ -2,11 +2,42 @@ package com.okanserdaroglu.firstkotlinapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private val KILO_TO_POUND = 2.2045
+    private val MARS = 0.38
+    private val POUND_TO_KG = 0.45359237
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var userKg = editTextWeight.text
+
+        buttonCalculate.setOnClickListener {
+
+            var weightPound = kgToPound(userKg.toString().toDouble())
+            var weightInMars = weightPound * MARS
+            var weightInMarsKg = poundToKg(weightInMars)
+
+            textViewResult.text = weightInMarsKg.toString()
+
+        }
+
     }
+
+    private fun kgToPound(kg: Double): Double {
+
+        return kg * KILO_TO_POUND
+
+    }
+
+    private fun poundToKg(pound: Double): Double {
+
+        return pound * POUND_TO_KG
+
+    }
+
 }
