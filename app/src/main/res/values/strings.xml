@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FirstKotlinApp</string>
+    <string name="how_many_kilos">How Many Weights On Planets</string>
+    <string name="weight_in_the_world">Weight in the world</string>
+    <string name="calculate">Calculate</string>
 </resources>
