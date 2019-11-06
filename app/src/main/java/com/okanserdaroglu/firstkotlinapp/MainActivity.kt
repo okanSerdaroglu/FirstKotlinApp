@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             var weightInMars = weightPound * MARS
             var weightInMarsKg = poundToKg(weightInMars)
 
-            textViewResult.text = weightInMarsKg.toString()
+            textViewResult.text = weightInMarsKg.format(2).toString()
 
         }
 
@@ -39,5 +39,7 @@ class MainActivity : AppCompatActivity() {
         return pound * POUND_TO_KG
 
     }
+
+    private fun Double.format (number : Int) = java.lang.String.format("%.${number}f",this) /** extention function added for Double class */
 
 }
