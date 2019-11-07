@@ -10,26 +10,25 @@
         android:id="@+id/textViewHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_25"
         android:text="@string/how_many_kilos"
         android:textSize="@dimen/text_size_20"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/editTextWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_8"
-        android:layout_marginTop="@dimen/margin_25"
-        android:layout_marginEnd="@dimen/margin_8"
         android:hint="@string/weight_in_the_world"
         android:inputType="number"
+        android:layout_marginTop="@dimen/margin_25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVenus" />
 
     <Button
         android:id="@+id/buttonCalculate"
@@ -52,6 +51,39 @@
         app:layout_constraintEnd_toEndOf="@id/editTextWeight"
         app:layout_constraintStart_toStartOf="@id/editTextWeight"
         app:layout_constraintTop_toBottomOf="@id/buttonCalculate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mars"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxVenus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader" />
+
+    <CheckBox
+        android:id="@+id/checkBoxVenus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/venus"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxJupiter"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMars"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader" />
+
+    <CheckBox
+        android:id="@+id/checkBoxJupiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jupiter"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxVenus"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

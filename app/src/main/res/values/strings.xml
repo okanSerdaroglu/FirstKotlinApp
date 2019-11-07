@@ -3,4 +3,8 @@
     <string name="how_many_kilos">How Many Weights On Planets</string>
     <string name="weight_in_the_world">Weight in the world</string>
     <string name="calculate">Calculate</string>
+    <string name="mars">Mars</string>
+    <string name="venus">Venus</string>
+    <string name="jupiter">Jupiter</string>
+
 </resources>
